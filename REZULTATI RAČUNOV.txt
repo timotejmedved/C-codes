@@ -1,0 +1,38 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+/*
+ * Napišite program, ki izračuna rezultat naslednjih računov: 13/2= ,
+ *  8125-315= , 750+24.58= , 3744*14222= , 14275*115633= , 12-34572= , 
+ * 225/6= , 225%6= , 378.2*22.6= in 13.0-2.1=! 
+ * Za vsako število najavi 
+ * spremenljivko ustreznega tipa. 
+ * Rezultate izpiši tako, da bo na zaslonu viden celoten račun npr.:13 / 2 = 6.5
+ */
+    
+    int a = 13/2 ;
+    cout<<"13/2= "<< a <<endl;
+    int b = 8125-315;
+    cout<<"8125-315= "<< b <<endl;
+    float c = 750+24.58;
+    cout<<"750+24.58= "<< c <<endl;
+    float d = 3744*14222;
+    cout<<"3744*14222= "<< d <<endl;
+    float e = 14275*115633;
+    cout<<"14275*115633= "<< e <<endl;
+    float ab = 12-34572;
+    cout<<"12-34572= "<< ab <<endl;   
+    float aa = 225/6;
+    cout<<"225/6= "<< aa <<endl;   
+    float aac = 225%6;
+    cout<<"225%6= "<< aac <<endl;  
+    float ac = 378.2*22.6;
+    cout<<"378.2*22.6= "<< ac <<endl;   
+    float acb = 13.0-2.1;
+    cout<<"13.0-2.1= "<< acb <<endl;
+    
+    return 0;
+}

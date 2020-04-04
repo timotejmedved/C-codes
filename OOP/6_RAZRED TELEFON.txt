@@ -1,0 +1,115 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/*
+ NALOGA RAZRED TELEFON
+ */
+
+class telefon{
+private:
+    string znamka;
+    string sistem;
+    string barva;
+    int locljivost_foto;
+    
+public:
+    telefon()  { }
+
+
+    telefon(string znamka, string sistem, string barva, int  locljivost_foto){
+        this->znamka = znamka;
+        this->sistem = sistem;
+        this->barva = barva;
+        this->locljivost_foto = locljivost_foto;
+    }
+    
+    
+    string GetBarva() const {
+        return barva;
+    }
+
+    void SetBarva(string barva) {
+        this->barva = barva;
+    }
+
+    int GetLocljivost_foto() const {
+        return locljivost_foto;
+    }
+
+    void SetLocljivost_foto(int locljivost_foto) {
+        this->locljivost_foto = locljivost_foto;
+    }
+
+    string GetSistem() const {
+        return sistem;
+    }
+
+    void SetSistem(string sistem) {
+        this->sistem = sistem;
+    }
+
+    string GetZnamka() const {
+        return znamka;
+    }
+
+    void SetZnamka(string znamka) {
+        this->znamka = znamka;
+    }
+
+    void IzpisiTelefon(){
+        cout<<"PODATKI O TELEFONU SO: "<<endl;
+        cout<<"ZNAMKA TELEFONA: "<<this->GetZnamka()<<endl;
+        cout<<"SISTEM NA TELEFONU: "<<this->GetSistem()<<endl;
+        cout<<"BARVA TELEFONA: "<<this->GetBarva()<<endl;
+        cout<<"LOCLJIVOST FOTOAPARATA: "<<this->GetLocljivost_foto()<<endl;
+        cout<<" "<<endl;
+    }
+    
+    
+};
+
+
+
+int main(int argc, char** argv) {
+    /*
+    telefon timi;
+    
+    timi.SetBarva("modra");
+    timi.SetLocljivost_foto(20);
+    timi.SetSistem("android");
+    timi.SetZnamka("samsung");
+    timi.IzpisiTelefon();
+    
+    telefon drugi("lg","ios","zelen",13);
+    drugi.IzpisiTelefon();
+     */
+    
+    
+    string znamka;
+    string sistem;
+    string barva;
+    int locljivost_foto;
+    
+    cout<<"PROGRAM TELEFON"<<endl;
+    cout<<"PODAJ PODTAKE"<<endl;
+    cout<<"ZNAKMA TELEFONA: "<<endl;
+    cin>>znamka;
+    cout<<"SISTEM: "<<endl;
+    cin>>sistem;
+    cout<<"BARVA TELEFONA: "<<endl;
+    cin>>barva;
+    cout<<"LOCLJIVOST FOTOAPARATA: "<<endl;
+    cin>>locljivost_foto;
+    cout<<" "<<endl;
+    telefon uporabnik(znamka,sistem,barva,locljivost_foto);
+    uporabnik.IzpisiTelefon();
+    
+    
+    
+    return 0;
+}
+
+

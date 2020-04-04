@@ -1,0 +1,87 @@
+/*
+ * File:   main.cpp
+ * Author: Timotej Medved
+ *
+ * Created on 06. januar 2019, 13:51
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <string>
+#include <time.h>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+                                                                                                                                                                                 
+    char besedilo[80];
+ 
+    int st_el=0, mns=0;
+    cout<<"Vnesi stevilo elementov polja (DOL�INA POLJA): "<<endl;
+    cin>>st_el;
+    system("clear");
+    cout<<"Vnesi max. naklju�nega �tevila (NAJVE�JE RANDOM �TEVILO): "<<endl;
+    cin>>mns;
+    system("clear");
+ 
+ 
+    int polje[st_el];
+    char bes[80];
+    int izbira=0;
+ 
+    do{
+        cout<<"   ___________________________________________"<<endl;
+        cout<<"   | 1. Napolni nakljucno polje celih stevil:|"<<endl;
+        cout<<"   |_________________________________________|"<<endl;
+        cout << endl;
+        cout<<"    Vnesi stevilo in potrdi z tipko enter!"<<endl;
+     
+     
+     
+        cin>>izbira;
+        cin.ignore();
+     
+        //dol�ina besedi, saoglasniki lo�ina
+     
+        if(izbira >18 || izbira <1){
+         
+            system("clear");
+            cout<<"Vnesi pravo stevilko!"<<endl;
+            sleep (1);
+            system("clear");
+            continue;
+        }
+     
+        switch(izbira){
+     
+            case 1:
+                system("clear");
+              //  NapolniNakljucno(polje,st_el,mns);
+            break;
+     
+            case 2:
+                system("clear");
+              //  IzpisiPoljeStevil(polje,st_el);
+            break;
+         
+            case 18:
+                cout<<endl;
+                cout<<endl;
+       
+                system("clear");
+                cout<<"                   NASVIDENJE. PRITISNI ENTER ZA ZAPRTJE OKNA!"<<endl;
+                cout<<endl;
+                cout<<endl;
+                return 0;
+            break;
+         
+         
+        }
+     
+     
+    }while(izbira != 18);
+      
+  
+    return 0;
+}

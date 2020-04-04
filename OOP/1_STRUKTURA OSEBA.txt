@@ -1,0 +1,117 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+using namespace std;
+
+class OSEBA{
+
+    string ime;
+    string priimek;
+    float teza;
+    float visina;
+    float bmi;
+   
+public:
+   
+   
+    float GetBmi() const {
+        return bmi;
+    }
+
+    void SetBmi(float bmi) {
+        this->bmi = bmi;
+    }
+
+    string GetIme() const {
+        return ime;
+    }
+
+    void SetIme(string ime) {
+        this->ime = ime;
+    }
+
+    string GetPriimek() const {
+        return priimek;
+    }
+
+    void SetPriimek(string priimek) {
+        this->priimek = priimek;
+    }
+
+    int GetTeza() const {
+        return teza;
+    }
+
+    void SetTeza(float teza) {
+        this->teza = teza;
+    }
+
+    int GetVisina() const {
+        return visina;
+    }
+
+    void SetVisina(float visina) {
+        this->visina = visina;
+    }
+   
+        void IzpisiOsebo(){
+            cout<<" "<<endl;
+        cout<<"IME: "<< this->GetIme()<<"\n"
+                <<"PRIIMEK: "<< this->GetPriimek()<<"\n"
+     
+          <<"BMI: "<<(float) this->GetTeza()/(this->GetVisina()*this->GetVisina())<<"\n"
+                 
+               
+                <<endl;
+   
+    }
+
+   
+
+};
+
+int main(int argc, char** argv) {
+
+    cout<<"VAJA STRUKTURA OSEBA"<<endl;
+    string ime;
+    string priimek;
+    float teza;
+    float visina;
+    cout<<"VNESI IME:"<<endl;
+    cin>>ime;
+   
+    cout<<"VNESI PRIIMEK:"<<endl;
+    cin>>priimek;
+   
+   
+    cout<<"VNESI TEZO:"<<endl;
+    cin>>teza;
+   
+    cout<<"VNESI VIŠINO:"<<endl;
+    cin>>visina;
+   
+   
+    OSEBA uporabnik;
+   
+    OSEBA *dijak;
+   
+    dijak= new OSEBA;
+   
+    dijak->SetIme(ime);
+   
+    dijak->SetPriimek(priimek);
+   
+    dijak->SetTeza(teza);
+   
+    dijak->SetVisina(visina);
+   
+   
+   
+   
+   
+    dijak->IzpisiOsebo();
+   
+   
+    return 0;
+}
+

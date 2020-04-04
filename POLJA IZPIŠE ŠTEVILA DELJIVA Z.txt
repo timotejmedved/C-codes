@@ -1,0 +1,29 @@
+//napolni polje elemento in izpišite vse polja elementov ki so deljiva s 3 in 13
+
+
+#include <cstdlib>
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+    int p[20];
+    
+    for( int i=0; i<20; i++) {
+    
+        p[i]= i*7;
+    
+    }
+    for(int  i=0; i<20; i++){
+    
+        cout<< p[i]<<" ";
+    
+    }
+    return 0;
+}
+

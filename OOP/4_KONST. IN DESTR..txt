@@ -1,0 +1,90 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/*
+ NALOGA KONSTRUKTORJI IN DESTRUKTORJI
+ */
+
+class pravokotnik{
+private:
+    int a;
+    int b;
+    
+public:
+    pravokotnik(){
+        this->a=1;
+        this->b=1;
+    }
+    
+    pravokotnik(int a){
+        this->a=a;
+        this->b=a;
+    }
+    pravokotnik(int a, int b){
+        this->a=a;
+        this->b=b;
+    
+    }
+
+    void obseg(){
+    
+        cout<<"OBSEG JE: ";
+        cout<<this->a+this->a+this->b+this->b;
+        cout<<" "<<endl;
+    
+    }
+    
+    void ploscina(){
+        cout<<"PLOSCINA JE: ";
+        cout<<this->a*this->b;
+        cout<<" "<<endl;
+    }
+    
+    void diagonala(){
+        cout<<"DOLZINA DIAGONALE JE: ";
+        cout<<(this->a*this->a)+(this->b+this->b);
+        cout<<" "<<endl;
+    }
+    
+
+};
+
+int main(int argc, char** argv) {
+
+    int a,b;
+    
+    cout<<"PROGRAM PRAVOKOTNIK KONSTRUKTOR"<<endl;
+   // cout<<"PODAJ PODATKE"<<endl;
+   // cout<<"PODAJ STRANICO A: "<<endl;
+   // cin>>a;
+   // cout<<"PODAJ STRANICO B: "<<endl;
+   // cin>>b;
+    pravokotnik timi;
+    timi.obseg();
+    timi.diagonala();
+    timi.ploscina();
+    
+    cout<<" "<<endl;
+    
+    pravokotnik drugi(5);
+    drugi.diagonala();
+    drugi.obseg();
+    drugi.ploscina();
+    
+    cout<<" "<<endl;
+    
+    pravokotnik tretji(10,10);
+    tretji.diagonala();
+    tretji.obseg();
+    tretji.ploscina();
+   
+    
+    
+    
+    return 0;
+}
+
+

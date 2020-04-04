@@ -1,0 +1,40 @@
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+#include <cstdlib>
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+    char besedilo[80];
+    
+    cout<<"VNESITE BESEDILO. "<<endl;
+    cin.getline(besedilo,80);
+    
+    //spremeni velike črke v male
+    
+    for(int i=0;i<80;i++)
+    {
+        if('A'<=besedilo[i] && besedilo[i]<='Z')
+        {
+            besedilo[i]=char(((int)besedilo[i])+32);
+        }
+            
+    }
+    
+    //prvo črko povedi spremeni v veliko črko
+    
+    int i=0;
+    
+    if('a'<=besedilo[i] && besedilo[i]<='z'){
+    besedilo[i]=char(((int)besedilo[i])-32);
+    
+    }
+    
+    cout<<besedilo<<"";
+    
+    return 0;
+}

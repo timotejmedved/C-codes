@@ -1,0 +1,25 @@
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    int stevilo=3214556;
+    
+    int o=0;
+    while(stevilo>0){
+        
+    int a=stevilo%10;
+    
+    o=o*10+a;
+      
+        
+    stevilo = stevilo / 10; 
+    
+    }
+    
+    cout<<o<<endl;
+    
+    return 0;
+}

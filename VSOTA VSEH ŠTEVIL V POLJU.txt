@@ -1,0 +1,57 @@
+/*
+ 1.Rezervirajte polje 30 celih števil. Polje napolnite z naključnimi števili.
+ *  Izpišite naključna števila med 0 in 500,
+ *  Izpišite vsoto vseh števil v polju.
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medo
+ *
+ * Created on 25. oktober 2018, 15:34
+ */
+
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+    int p[30];
+    
+    srand(time(NULL)); 
+    
+    //IZBERE NAKLJUČNA ŠTEVILA IN JIH ZAPIŠE V POLJE
+    
+    for(int i=0; i<30; i++)
+    {
+       p[i] = (rand()% 500)+1;
+    }
+    
+    cout<<"IZBRANA NAKLJUČNA ŠTEVILA SO: "<<endl;
+    
+    for(int i=0; i<30; i++)
+    {
+        cout<<p[i]<<endl;
+    }
+    
+    
+    int vsota;
+    vsota = 0;
+    
+    for(int i=0; i<30; i++)
+    {
+        vsota = vsota + p[i];
+    }
+    
+    cout<<"VSOTA VSEH VREDNOSTI V POLJU JE: "<< vsota <<endl;
+    
+    
+    return 0;
+}

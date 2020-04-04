@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   char ch;
+   cout<<"VNESI BESEDILO: "; 
+   cin>>ch;
+   ch=ch-32;
+   cout<<"Entered character in uppercase: "<<ch;
+   return 0;
+}
+
+
+
+/*
+  for (char a='a';a<'z';a++ ){
+    //spremenimo male crke v velike
+        char v=a-32;
+        cout << a << v << " ";
+       
+    }*//*
+
+int main(int argc, char** argv) {
+  //Vnos besedila v polje prek tipkovnice
+    char zajem[80];
+    cout << "Vnesi besedilo: ";
+    cin.getline(zajem,80);
+//izpis besedila
+    for (int i=0;zajem[i]!='\0';i++){
+     
+        cout << zajem[i];
+       
+    }*/

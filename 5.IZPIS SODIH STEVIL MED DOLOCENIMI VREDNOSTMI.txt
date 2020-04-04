@@ -1,0 +1,57 @@
+/*
+2.Napiši program, ki s pomočjo zanke izpiše vsa soda števila med 11000 in 10985.
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medved.timotej
+ *
+ * Created on 14. september 2018, 11:26
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+    int i=11000;
+    while(i<100986){
+    
+        if(i>10986 && i<=11000 ){
+        
+            cout<<i;
+        }
+    
+    }
+    
+    
+    
+    return 0;
+}
+
+/*
+ i=o;
+ while(i<10000){
+ * if(i%2==1){
+ * 
+ * 
+ * }
+ * i++;
+ * }
+ */
+
+/*
+
+while(i<100000){
+
+    if(i>=200)&&(i<=300){
+    
+        cout<< i <<;
+    }
+    
+
+
+}*/

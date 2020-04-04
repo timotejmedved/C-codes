@@ -1,0 +1,27 @@
+//dolžine polja DRUGI ARGUMENT
+//p[]polje  PRVI ARGUMENT
+void NajmanjsaStevilkaVpolju(int p[], int d){
+
+    int min = p[0];
+    
+    for(int i=1;i<d;i++){
+        if (p[i]<min){       //obrni znak in program bo poiskal največjo številko v dname polju
+            min = p[i];
+        }
+    
+    
+    }
+
+    cout<<"najmanjša številka je  "<<min<<endl;
+
+}
+
+
+/*
+KLICANJE PODPROGRAMA IZ GLAVNEGA PROGRAMA
+
+ case 15:
+                system("clear");
+                NajmanjsaStevilkaVpolju(polje,st_el);
+            break;
+*/

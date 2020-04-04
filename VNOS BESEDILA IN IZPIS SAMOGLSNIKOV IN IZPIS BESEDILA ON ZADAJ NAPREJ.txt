@@ -1,0 +1,53 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+    char besedilo[80];
+    int st = 0; //število samoglasnikov v besedilo
+    
+    cout<<"VNESITE BESEDILO: "<<endl;
+    
+    cin.getline(besedilo,80);
+    
+    cout<<"SAMOGLASNIKI V VNESENEM BESEDILU SO : "<<endl;
+    
+    for(int i=0; besedilo[i]!='\0';i++){
+        
+        if(besedilo[i]=='a' ||besedilo[i]=='e'||besedilo[i]=='i'||besedilo[i]=='o'||besedilo[i]=='u' ||
+                besedilo[i]=='A' ||besedilo[i]=='E'||besedilo[i]=='I'||besedilo[i]=='O'||besedilo[i]=='U')
+        {
+            st++;
+            cout<<besedilo[i]<<" ";
+        }  
+       
+    }
+
+    cout<<" "<<endl;
+     cout<<"ŠTEVILO VSEH SAMOGLASNIKOV JE: "<<st<<endl;//samoglasniki
+    
+
+     
+     int sst=0;
+
+            
+            for(int i=0; besedilo[i]!='\0';i++){
+                sst++;
+               }
+            
+    
+    for (int i=sst;i>=0;i--){
+        
+        cout<<besedilo[i];
+     
+    }
+    
+     
+    
+    return 0;
+}

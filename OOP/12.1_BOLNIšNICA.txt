@@ -1,0 +1,135 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/*
+ NALOGA RAZRED BOLNIŠNICA
+ */
+
+class bolnik{
+private:
+    string ime;
+    int startost;
+    string datum_rojstva;
+    
+    
+public:
+
+    bolnik(  string ime, int startost, string datum_rojstva){
+        ime=ime;
+        startost= startost;
+        datum_rojstva=datum_rojstva;
+    }
+        
+    string GetDatum_rojstva() const {
+        return datum_rojstva;
+    }
+
+    void SetDatum_rojstva(string datum_rojstva) {
+        this->datum_rojstva = datum_rojstva;
+    }
+
+    string GetIme() const {
+        return ime;
+    }
+
+    void SetIme(string ime) {
+        this->ime = ime;
+    }
+
+    int GetStartost() const {
+        return startost;
+    }
+
+    void SetStartost(int startost) {
+        this->startost = startost;
+    }
+
+
+};
+
+void dodaj_bolnika(){
+    int st_dod;
+    cout<<"KOLIKO PACIENTOV BOS DODAL"<<endl;
+    cin>>st_dod;
+    
+    string ime;
+    int startost;
+    string datum_rojstva;
+    for(int i=1; i<=st_dod;i++){
+    
+    cout<<"VNESI IME PACIENTA"<<endl;
+    cin>>ime;
+    
+     cout<<"VNESI STAROST PACIENTA"<<endl;
+    cin>>startost;
+    
+      cout<<"VNESI ROJSTVO PACIENTA"<<endl;
+    cin>>datum_rojstva;
+    
+    bolnik *vsi;
+    vsi = new bolnik[i];
+   
+   
+    (vsi+i)->SetIme(ime);
+    (vsi+i)->SetStartost(startost);
+    (vsi+i)->SetDatum_rojstva(datum_rojstva);
+   
+   
+    }
+
+}
+
+
+
+
+void meni_gl(){
+    
+    int izbira;
+    
+    cout<<" MENI OZBERI OPCIJO:"<<endl;
+    cout<<" 1. DODAJ BOLNIKA"<<endl;
+    cout<<" 2. IZBRISI BOLNIKA"<<endl;
+    cout<<" 3. ISCI BILNIKA PO IMENU"<<endl;
+    cout<<" 4. IZPISI VSE BOLNIKE"<<endl;
+    cout<<" 5. RAZVRSTI BOLNIKE PO STAROSTI IN JIH IZPISI"<<endl;
+    cin>>izbira;
+    
+    switch(izbira){
+    case 1:
+        dodaj_bolnika();
+    break;
+    
+    case 2:
+        
+    break;
+    
+    case 3:
+        
+    break;
+    
+    case 4:
+        
+    break;
+    
+    case 5:
+        
+    break;
+    
+    }
+
+}
+
+
+
+int main(int argc, char** argv) {
+
+    cout<<"PROGRAM BILNIŠNICA"<<endl;
+    
+    meni_gl();
+    return 0;
+}
+
+

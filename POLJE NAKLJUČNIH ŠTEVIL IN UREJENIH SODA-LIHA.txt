@@ -1,0 +1,58 @@
+/*
+ * naključnio napoljnite polje 200 celih števil.
+ * novo polje uredite tako da bodo najprej v polju vsa soda števila potem pa liha.
+ * 
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medved.timotej
+ * VAJA 1
+ * Created on 05. oktober 2018, 11:32
+ */
+
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+    int p[200];
+    
+    
+     srand(time(NULL));
+    
+    for(int i=0;i<100;i++)
+    {
+        p[i]=rand()%750;//naključna števila med nič in 750
+    }
+    
+    ///////////////////////////////////////////////////////////////////
+     
+     int p1[100]; //polje 
+     
+     
+     for(int i=0, j=0, k=99; i<100, j<=k ; i++){
+     
+         if(p[i]%2==0){
+             p1[j]=p[i];
+             j++;
+         }
+         else
+         {      
+             p1[k]=p[i];
+             k--;
+         }
+     
+     }
+     for(int i=0;i<100;i++){  //zanka za izpis polja sodih-lihih števil
+         cout <<p1[i]<<" ";
+     }
+    
+    return 0;
+}

@@ -1,0 +1,33 @@
+/*
+ 6.Napišite program, ki izračuna število keramičnih ploščic, če vemo da je ena ploščica velika 30x30 cm. 
+ * Ploščice moramo položiti po sobi velikosti 3,4 m x 2,8 m x 2,2m (ali podamo mere prek tipkovnice). 
+ * Ploščice položimo po vseh stenah razen stropa in okna. Okno je veliko 100 cm x 90 cm. 
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medved.timotej
+ *
+ * Created on 14. september 2018, 12:08
+ */
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+    
+    int a;
+    
+    cout<<3,4*2,8*2,2<<endl;
+    
+    
+    
+    
+    return 0;
+}
+

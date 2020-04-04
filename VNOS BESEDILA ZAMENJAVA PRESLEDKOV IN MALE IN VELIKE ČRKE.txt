@@ -1,0 +1,51 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+    
+    
+    
+    char besedilo[80];
+    int i;
+    int st;
+    i=0;
+    
+    cin.getline(besedilo,80);
+
+        
+         
+  
+ for(int i=0; besedilo[i]!='\0';i++){
+   
+   
+     
+    if(besedilo[i]==' ' ){
+        
+       
+                
+        besedilo[i]='_';
+      
+    
+    }
+    
+    
+    if(besedilo[i]=='i')
+    {
+        besedilo[i]='I';
+    }
+  
+ 
+ }
+     
+     
+     for(int i=0; besedilo[i]!='\0';i++){
+    
+        cout<<besedilo[i];
+     }
+ 
+
+}

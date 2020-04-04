@@ -1,0 +1,69 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+struct tocka
+{
+    int name;
+    int x;
+    int y;
+};
+
+void razdalja(tocka,tocka);   // Function declaration
+
+int main()
+{
+    tocka p;
+    p.name=1;
+    tocka d;
+    d.name=2;
+    tocka t;
+    t.name=3;
+    
+   
+    cout << "VNESI PRVO TOCKO X: ";
+    cin >> p.x;
+    cout << "VNESI PRVO TOCKO Y: ";
+    cin >> p.y;
+
+     cout << "VNESI DRUGO TOCKO X: ";
+    cin >> d.x;
+    cout << "VNESI DRUGO TOCKO Y: ";
+    cin >> d.y;
+    
+     cout << "VNESI TRETJO TOCKO X: ";
+    cin >> t.x;
+    cout << "VNESI TRETJO TOCKO Y: ";
+    cin >> t.y;
+    
+    // Function call with structure variable as an argument
+    cout<<"RAZDALJA PRVA IN DRUGA TOCKA JE: ";
+            razdalja(p,d); //razdalja prva in druga
+    cout<<"RAZDALJA PRVA IN TRET<JA TOCKA JE: ";
+            razdalja(p,t); //razdalja prva in tretja
+    cout<<"RAZDALJA DRUGA IN TRETJA TOCKA JE: ";
+            razdalja(d,t); //razdalja druga intretja
+    
+    return 0;
+}
+
+void razdalja(tocka p, tocka d)
+{
+    
+    
+    
+    cout<<""<<sqrt(((p.x-d.x)*(p.x-d.x))+((p.y-d.y)*(p.y-d.y)));
+    cout<<""<<endl;
+    cout<<""<<endl;
+     
+    
+    
+    
+    
+    
+    
+    
+    
+}

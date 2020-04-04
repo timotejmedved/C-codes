@@ -1,0 +1,44 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/*
+ NALOGA RAZRED SMUČARSKI SKOKI
+ */
+
+class smucarski_skoki{
+private:
+    int st_tekmovalca;
+    int dolzina_skoka;
+    int ocene[4];
+    int vetrena_izravnava;
+    int izravnava_zaletisca; 
+    
+public:
+
+   void smucarski_skoki(int st_tekmovalca,int dolzina_skoka,int ocene[],int vetrena_izravnava,int izravnava_zaletisca){
+    st_tekmovalca= st_tekmovalca;
+    dolzina_skoka=dolzina_skoka;
+    ocene=ocene;
+    vetrena_izravnava=vetrena_izravnava;
+    izravnava_zaletisca=izravnava_zaletisca; 
+   
+   }
+
+   
+   
+
+};
+
+
+
+
+
+int main(int argc, char** argv) {
+
+    return 0;
+}
+
+

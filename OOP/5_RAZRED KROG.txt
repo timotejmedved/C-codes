@@ -1,0 +1,102 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/*
+ NALOGA REZRED KROG
+ */
+
+class krog{
+private:
+    float x;
+    float y;
+    float polmer;
+    
+public:
+
+    float GetPolmer() const {
+        return polmer;
+    }
+
+    void SetPolmer(float polmer) {
+        this->polmer = polmer;
+    }
+
+    float GetX() const {
+        return x;
+    }
+
+    void SetX(float x) {
+        this->x = x;
+    }
+
+    float GetY() const {
+        return y;
+    }
+
+    void SetY(float y) {
+        this->y = y;
+    }
+
+
+    void vrniS_R(){
+    
+        cout<<"S("<<this->GetX()<<","<<this->GetY()<<")"<<endl;
+        cout<<"R: "<<this->GetPolmer()<<endl;
+    
+    }
+    
+    
+    void obseg_ploscina(){
+    float r = this->GetPolmer();
+    float pi=3.14;
+    cout<<"OBSEG KROGA JE: "<<endl;
+    
+    float o=2*pi*r;
+    cout<<o<<endl;
+    cout<<" "<<endl;
+    
+    cout<<"PLOŠČINA KROGA JE: "<<endl;
+    
+    float ploscina;
+    ploscina = pi*(r*r);
+    cout<<ploscina<<endl;
+    }
+
+};
+
+
+
+
+
+int main(int argc, char** argv) {
+    float x;
+    float y;
+    float p;
+    krog prvi;
+    cout<<"PODAJ KORDINATO X"<<endl;
+    cin>>x;
+    
+    
+    cout<<"PODAJ KORDINATO Y"<<endl;
+    cin>>y;
+    
+    
+    cout<<"PODAJ POLMER"<<endl;
+    cin>>p;
+    
+    prvi.SetPolmer(p);
+    prvi.SetX(x);
+    prvi.SetY(y);
+    
+    prvi.vrniS_R();
+    prvi.obseg_ploscina();
+    
+    
+    
+    return 0;
+}
+
+

@@ -1,0 +1,40 @@
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+
+    int p[100];
+    
+    
+    srand(time(NULL));  
+    //napolni polja
+    for(int i=0;i<100;i++)
+    {
+        p[i]=rand()%750;//naključna števila med nič in 750
+    }
+    
+     for(int i=0;i<100;i++) //izpis števil polja na ekran
+    {
+        cout<< p[i] << " ";
+        
+    }
+    
+    
+    int mini=p[0];
+    
+    for(int i=0; i<100;i++){
+        if(p[i]<mini){mini=p[i]; //išče najmanjšo številko
+        }
+    }
+    
+    cout<< endl << mini <<endl; //izpis najmanjše številke
+    
+    
+    return 0;
+}

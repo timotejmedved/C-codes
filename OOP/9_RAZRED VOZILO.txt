@@ -1,0 +1,89 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+/*
+ NALOGA RAZRED VOZILO
+ */
+
+class vozilo{
+private:
+    string znamka;
+    string barva;
+    string pogon;
+    int max_hitrost;
+    
+    
+public:
+
+    vozilo(){}
+
+    vozilo(string znamka, string barva, string pogon, int max_hitrost){
+        this->znamka = znamka;
+        this->barva = barva;
+        this->pogon = pogon;
+        this->max_hitrost = max_hitrost;
+    }
+
+    string GetBarva() const {
+        return barva;
+    }
+
+    void SetBarva(string barva) {
+        this->barva = barva;
+    }
+
+    int GetMax_hitrost() const {
+        return max_hitrost;
+    }
+
+    void SetMax_hitrost(int max_hitrost) {
+        this->max_hitrost = max_hitrost;
+    }
+
+    string GetPogon() const {
+        return pogon;
+    }
+
+    void SetPogon(string pogon) {
+        this->pogon = pogon;
+    }
+
+    string GetZnamka() const {
+        return znamka;
+    }
+
+    void SetZnamka(string znamka) {
+        this->znamka = znamka;
+    }
+    
+    void izpi(){
+       cout<<"PODATKI ZA VOZILO SO"<<endl;
+        cout<<"ZNAMKA: "<< this->GetZnamka()<<endl;
+        cout<<"BARVA: "<< this->GetBarva()<<endl;
+        cout<<"POGON: "<< this->GetPogon()<<endl;
+        cout<<"MAX HITROST: "<< this->GetMax_hitrost()<<endl;
+        cout<<" "<<endl;
+    
+    
+    }
+
+
+};
+
+
+int main(int argc, char** argv) {
+
+  
+    vozilo novo("reno","moder-zelen","voda",50);
+    vozilo staro("audi","moder","dizel",250);
+    
+    novo.izpi();
+    staro.izpi();
+    
+    
+    return 0;
+}
+
+

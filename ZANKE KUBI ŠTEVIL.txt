@@ -1,0 +1,58 @@
+/*
+Napiši program, ki na zaslon izpiše števila od 1 do 10, njihove kvadrate in kube.
+Nalogo reši z vsemi tremi zankami while, do while in for.
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: TIMOTEJ MEDVED
+ *
+ * Created on 12. september 2018, 16:19
+ */
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+    int a;
+    a=1;
+    
+    cout<<"IZPIS Z WHILE ZANKO"<<endl;
+     cout<<endl;
+    while(a<=10){
+        cout<<a;
+        cout<<"  kvadrat števila "<< a <<" je "<<a*a<<endl;
+        cout<<"   kub stevila "<< a <<" je "<<a*a*a<<endl;
+        a++ ;  
+         cout<<endl;
+    }
+     
+    cout<<"IZPIS Z DO WHILE ZANKO"<<endl;
+     cout<<endl;
+    a=1;
+    do{
+        cout<<a;
+        cout<<"  kvadrat stevila "<< a <<" je "<<a*a<<endl;
+        cout<<"   kub stevila "<< a <<" je "<<a*a*a<<endl;
+        a++ ;   
+         cout<<endl;
+    }while(a<=10);
+    
+    
+    cout<<"IZPIS Z FOR ZANKO"<<endl;
+     cout<<endl;
+    
+    for(a=1;a<=10;a++){
+      cout<<a;
+        cout<<"  kvadrat stevila "<< a <<" je "<<a*a<<endl;
+        cout<<"   kub stevila "<< a <<" je "<<a*a*a<<endl;  
+        cout<<endl;
+    }
+    
+    return 0;
+}

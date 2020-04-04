@@ -1,0 +1,18 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+    int a=123;
+    int b;
+    
+    b=a%10;
+    
+    cout<<b<<endl;
+    return 0;
+}
+

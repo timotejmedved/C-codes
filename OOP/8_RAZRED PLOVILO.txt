@@ -1,0 +1,123 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+using namespace std;
+
+/*
+ NALOGA RAZRED PLOVILO
+ */
+
+class plovilo{
+
+private:
+    int dolzina;
+    int st_oseb;
+    int max_hitrost;
+    int reg_st;
+    string ime;
+    
+public:
+    int GetDolzina() const {
+        return dolzina;
+    }
+
+    void SetDolzina(int dolzina) {
+        this->dolzina = dolzina;
+    }
+
+    string GetIme() const {
+        return ime;
+    }
+
+    void SetIme(string ime) {
+        this->ime = ime;
+    }
+
+    int GetMax_hitrost() const {
+        return max_hitrost;
+    }
+
+    void SetMax_hitrost(int max_hitrost) {
+        this->max_hitrost = max_hitrost;
+    }
+
+    int GetReg_st() const {
+        return reg_st;
+    }
+
+    void SetReg_st(int reg_st) {
+        this->reg_st = reg_st;
+    }
+
+    int GetSt_oseb() const {
+        return st_oseb;
+    }
+
+    void SetSt_oseb(int st_oseb) {
+        this->st_oseb = st_oseb;
+    }
+    
+    void IzpisPlovilo(){
+        
+        cout<<"PODATKI ZA PLOVILO SO"<<endl;
+        cout<<"IME PLOVILA: "<< this->GetIme()<<endl;
+        cout<<"DOLZINA VOZILA: "<< this->GetDolzina()<<endl;
+        cout<<"MAX HITROST: "<< this->GetMax_hitrost()<<endl;
+        cout<<"REGISTERSKA STEVILKA: "<< this->GetReg_st()<<endl;
+        cout<<"STEVILO OSEB: "<< this->GetSt_oseb()<<endl;
+    
+    }
+
+
+};
+
+
+
+
+int main(int argc, char** argv) {
+    plovilo predmet;
+    int dolzina;
+    int st_oseb;
+    int max_hitrost;
+    int reg_st;
+    string ime;
+    
+    cout<<"VNESI PODATKE ZA PLOVILO"<<endl;
+    
+    cout<<"VNESI DOLŽINO: "<<endl;
+    cin>>dolzina;
+
+    
+    cout<<"VNESI IME PLOVILA: "<<endl;
+    cin>>ime;
+
+    
+    cout<<"MAX HITROST: "<<endl;
+    cin>>max_hitrost;
+    
+    
+    cout<<"VNESI REG. STEV: "<<endl;
+    cin>>reg_st;
+
+    
+    cout<<"VNESI STEVILO OSEB: "<<endl;
+    cin>>st_oseb;
+
+
+    
+    
+    predmet.SetDolzina(dolzina);
+    predmet.SetIme(ime);
+    predmet.SetMax_hitrost(max_hitrost);
+    predmet.SetReg_st(reg_st);
+    predmet.SetSt_oseb(st_oseb);
+    
+    predmet.IzpisPlovilo();
+    
+    
+    
+    
+    return 0;
+}
+
+

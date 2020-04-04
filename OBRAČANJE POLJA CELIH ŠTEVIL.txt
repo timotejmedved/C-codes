@@ -1,0 +1,35 @@
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+#include <cstdlib>
+
+using namespace std;
+
+/*
+ OBRAČANJE POLJA CELIH ŠTEVIL
+ */
+
+void ObrniPolje(int p[], int dol){
+    
+    for (int i = 0, j=dol-1; i<j; i++,j--) {
+        int tmp;
+        tmp=p[i];
+        p[i]=p[j];
+        p[j]=tmp;
+
+    }
+
+}
+
+int main(int argc, char** argv) {
+
+    int polje[5]= {100, 200, 300, 400, 500};
+
+
+  ObrniPolje(polje,5);
+  cout << "Obrnjeno" << endl;
+
+   
+    return (EXIT_SUCCESS);
+}

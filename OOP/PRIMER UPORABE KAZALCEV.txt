@@ -1,0 +1,28 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char** argv)
+{
+    int a = 5;
+    int *b;
+    int *c;
+
+    b = &a;
+    // b je kazalec, ki kaze na spremenljivko a
+    // c se nismo nikamor postavili
+    cout << "a: " << a << "  b: " << *b << "  c: " << *c << "\n";
+    c = b;
+    // sedaj ima c vrednost b, kar pomeni, da tudi kaza na sprem. a
+    cout << "a: " << a << "  b: " << *b << "  c: " << *c << "\n";
+
+    *b = 3;
+    // vrednost spremenljivke, kamor kaze b smo spremenili na 3,
+    // tj. vrednost spremenljivke c, tja kaze tudi spremenljivka c
+    cout << "a: " << a << "  b: " << *b << "  c: " << *c << "\n";
+   
+
+    return 0;
+}

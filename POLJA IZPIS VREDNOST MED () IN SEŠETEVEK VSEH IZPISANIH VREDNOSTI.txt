@@ -1,0 +1,47 @@
+/*
+ * izpišite vse vrednoisti elemento ki imajo vrednosti intervalo med 80-200 ter 150-400 in so deljivi s 5 vrednosti seštejte
+ * 
+ */
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+
+int main(int argc, char** argv) {
+ int p[100];
+  
+  
+  for(int i=0;i<100;i++){
+  
+  p[i]=i*7;
+  
+  
+  
+  }
+  
+  
+  for(int i=0;i<100;i++){
+  
+  if(p[i] %5==0 && p[i]>=80 && p[i]<=200 ){
+  
+  cout<< p[i]<<" ";
+  }
+  
+  }
+ 
+ 
+ 
+  for(int i=0;i<100;i++){
+  
+  if(p[i] %5==0 && p[i]>=150 && p[i]<=400 ){
+
+  cout<< p[i]<<" ";
+  }
+  
+  }
+ 
+    return 0;
+}
+
+//p[i]%6==0

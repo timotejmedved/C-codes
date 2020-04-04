@@ -1,0 +1,460 @@
+/*
+ * File:   main.cpp
+ * Author: medved.timotej
+ *
+ * Created on 23. november 2018, 10:57
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <string>
+#include <time.h>
+
+using namespace std;
+
+//dodaj case v glavnem programu
+void UrediPolje(int p[], int d, int mns){
+    int mi=0;
+    int zam;
+    for(int i=0; i<d; i++){
+    
+        if(p[i]>=mi){
+            p[i]=zam;
+        
+        }
+    }
+
+}
+
+void NapolniNakljucno(int p[],int d, int mns ){
+   
+    for(int i=0; i<d; i++){          
+        p[i]=rand() % mns;
+    }
+}
+
+void IzpisiPoljeStevil(int p[],int d){
+   
+    for(int i=0; i<d; i++){          
+        cout<<p[i]<<" ";
+    }
+    cout << endl;
+   
+}
+
+void VsotaLihihStevil(int p[],int d){
+
+    int liha=0;
+   
+    for(int i=0; i<d; i++){          
+        if(p[i]%2){
+       
+            liha=liha+p[i];
+       
+        }           
+    }
+    cout<<"Vsota vseh lihih stevil je: "<<liha<<endl;
+}
+
+void SodaStevil(int p[], int d){
+
+    for(int i=0; i<d; i++){          
+        if(p[i]%2==0){
+       
+            cout<<p[i]<<" ";
+       
+        }           
+    }
+     cout << endl;
+}
+
+void LihaStevil(int p[], int d){
+
+
+    for(int i=0; i<d; i++){          
+        if(p[i]%2){
+       
+            cout<<p[i]<<" ";
+       
+        }
+       
+    }
+     cout << endl;
+}
+
+void VnosBesedila(char besedilo[]){
+
+   
+    cout<<"Vnesi besedilo"<<endl;
+    cin.getline(besedilo,80);
+    cin.ignore();
+
+}
+
+void IzpiBesedila(char p[]){
+    int i = 0;
+
+    while(p[i] != '\0')
+    { cout<<p[i];
+    i++;
+    }
+   
+    cout<<endl;
+}
+
+void ObrniBesedilo(char besedilo[]){
+
+   int sst=0;
+
+           
+            for(int i=0; besedilo[i]!='\0';i++){
+                sst++;
+               }
+           
+   cout<<endl;
+   
+    for (int i=sst;i>=0;i--){
+       
+        cout<<besedilo[i];
+    
+    }
+   
+        cout<<endl;
+
+   
+   
+}
+
+void LocilaBesedilo(char besedilo[]){
+    int st=0;
+for(int i=0; besedilo[i]!='\0';i++){
+       
+        if(besedilo[i]==';' ||besedilo[i]=='.'||besedilo[i]==','||besedilo[i]=='?'||besedilo[i]=='!')
+        {
+            st++;
+            cout<<besedilo[i]<<" ";
+        } 
+      
+    }
+
+    cout<<" "<<endl;
+     cout<<"ŠTEVILO VSEH LOČIL V POLJU JE: "<<st<<endl;//samoglasniki
+   
+
+}
+
+void DolzinaBesedila(char besedilo[]){
+    int st=0;
+    for(int i=0; besedilo[i]!='\0';i++){
+   
+        st++;
+       
+    }
+
+    cout<<"VNESENO BESEDILO JE DOLŽINE "<<st<<" "<<endl;
+   
+   
+}
+
+void SteviloPreseldkov(char besedilo[]){
+
+
+    int st=0;
+for(int i=0; besedilo[i]!='\0';i++){
+       
+        if(besedilo[i]==' ')
+        {
+            st++;
+           
+        } 
+      
+    }
+
+    cout<<" "<<endl;
+     cout<<"ŠTEVILO VSEH PRESLEDKOV V VNESENEM BESEDILU JE: "<<st<<endl;//samoglasniki
+   
+
+}
+
+void Avtor(){
+
+    cout<<endl;
+    cout<<"           Timotej Medved"<<endl;
+    cout<<"                2018     "<<endl;
+    cout<<endl;
+
+}
+
+void Igra(){
+    novo:
+    int moz=10;
+    int n=0;
+    srand (time(NULL));
+    n=rand() % 100;
+    //cout<<n;
+    int i;
+    char ponovno;
+    system("clear");
+    cout<<"PROGRAM JE IZBRAL ŠTEVILKO UGANI KATERO ŠTEVILO JE TO. ŠTEVILO JE MED 0 IN 100"<<endl;
+   
+    for(int i=0; i<=0;i--){
+           
+    while(i=n){      
+    cin>>i;
+   
+    if(moz==0){
+        cout<<"Na voljo nimaš več nobenega poskusa! "<<moz<<endl;
+        goto konec;
+    }
+   
+     if(i<n){
+   
+         system("clear");
+        cout<<"Število je VEČJE"<<endl;
+        cout<<"Na voljo še poskusov "<<moz<<endl;
+     }
+     if (i>n){
+         system("clear");
+        cout<<"Število je MANJŠE"<<endl;
+        cout<<"Na voljo še poskusov "<<moz<<endl;
+    }
+     if(i==n){
+                    system("clear");
+                     cout<<"Pravilna izbira"<<endl;
+                    // cout<<"ŽELIŠ IGRATI PONOVNO y/n! (yes / no)"<<endl;
+                  //   cin>>ponovno;
+                    
+                    // if(ponovno=='y'||ponovno=='Y'||ponovno=='yes'||ponovno=='YES'){
+                    //     goto novo;
+                    
+                   //  }
+                    // else if(ponovno=='n'||ponovno=='N'||ponovno=='no'||ponovno=='NO'){
+                         goto konec;
+                    
+                   //  }
+      
+       
+        }   
+      moz--; 
+    }
+   
+
+    }
+    konec:
+    //system("clear");
+cout<<"KONEC "<<endl;
+cout<<"ŽELIŠ IGRATI PONOVNO y/n! (yes / no)"<<endl;
+                     cin>>ponovno;
+                    
+                     if(ponovno=='y'||ponovno=='Y'||ponovno=='yes'||ponovno=='YES'){
+                         goto novo;
+                    
+                     }   
+                     else{}
+                    
+}
+
+void maleVelike(){
+
+
+
+
+
+}
+//dolžine polja
+//p[]polje
+void NajmanjsaStevilkaVpolju(int p[], int d){
+
+    int min = p[0];
+    
+    for(int i=1;i<d;i++){
+        if (p[i]<min){       //obrni znak in program bo poiskal največjo številko v dname polju
+            min = p[i];
+        }
+    
+    
+    }
+
+    cout<<"najmanjša številka je  "<<min<<endl;
+
+}
+
+int main(int argc, char** argv) {
+                                                                                                                                                                                   
+    char besedilo[80];
+ 
+    int st_el=0, mns=0;
+    cout<<"Vnesi stevilo elementov polja (DOLŽINA POLJA): "<<endl;
+    cin>>st_el;
+    system("clear");
+    cout<<"Vnesi max. naključnega števila (NAJVEČJE RANDOM ŠTEVILO): "<<endl;
+    cin>>mns;
+    system("clear");
+   
+   
+    int polje[st_el];
+    char bes[80];
+    int izbira=0;
+   
+    do{
+        cout<<"   ___________________________________________"<<endl;
+        cout<<"   | 1. Napolni nakljucno polje celih stevil:|"<<endl;
+        cout<<"   | 2. Izpisi polje celih stevil:           |"<<endl;
+        cout<<"   | 3. Izpisi vsoto lihih stevil v polju:   |"<<endl;
+        cout<<"   | 4. Izpisi vsa liha stevila v polju:     |"<<endl;
+        cout<<"   | 5. Izpisi vsa soda stevila v polju:     |"<<endl;
+        cout<<"   | 6. Vnos besedila preko tipkovnice:      |"<<endl;
+        cout<<"   | 7. Izpi dolžine vnesenega besedila:     |"<<endl;
+        cout<<"   | 8. Izpis vnesenega besedila:            |"<<endl;
+        cout<<"   | 9. Menjava (Obrni besedilo):            |"<<endl;
+        cout<<"   | 10. Število ločil v vnesenem besedilu:  |"<<endl;
+        cout<<"   | 11. Število presedkov v besedilu:       |"<<endl;
+        cout<<"   | 12. Spremeni velike črke v male:(0)     |"<<endl;
+        cout<<"   | 13. Število samoglasnikov v besedilu:(0)|"<<endl;
+        cout<<"   | 14. Število soglasnikov v besedilu:(0)  |"<<endl;
+        cout<<"   | 15.                                     |"<<endl;
+        cout<<"   | 16. AVTOR PROGRAMA                      |"<<endl;
+        cout<<"   | 17. IGRA                                |"<<endl;
+        cout<<"   |_________________________________________|"<<endl;
+        cout<<"   |_________________________________________|"<<endl;
+        cout<<"   | 18. ZAPUSTI PROGRAM                     |"<<endl;
+        cout<<"   |_________________________________________|"<<endl;
+        cout << endl;
+        cout<<"    Vnesi stevilo in potrdi z tipko enter!"<<endl;
+       
+       
+       
+        cin>>izbira;
+        cin.ignore();
+       
+        //dolžina besedi, saoglasniki ločina
+       
+        if(izbira >18 || izbira <1){
+           
+            system("clear");
+            cout<<"Vnesi pravo stevilko!"<<endl;
+            sleep (1);
+            system("clear");
+            continue;
+        }
+       
+        switch(izbira){
+       
+            case 1:
+                system("clear");
+                NapolniNakljucno(polje,st_el,mns);
+            break;
+       
+            case 2:
+                system("clear");
+                IzpisiPoljeStevil(polje,st_el);
+            break;
+           
+            case 3:
+                system("clear");
+                VsotaLihihStevil(polje,st_el);
+            break;
+           
+            case 4:
+                system("clear");
+                LihaStevil(polje,st_el);
+            break;
+           
+            case 5:
+                system("clear");
+                SodaStevil(polje,st_el);
+            break;
+           
+            case 6:
+                system("clear");
+                VnosBesedila(bes);
+               
+            break;
+           
+            case 7:
+                system("clear");
+                DolzinaBesedila(bes);
+            break;
+           
+            case 8:
+                system("clear");
+                IzpiBesedila(bes);
+            break;
+           
+            case 9:
+                system("clear");
+                ObrniBesedilo(bes);
+               
+            break;
+           
+            case 10:
+                system("clear");
+                LocilaBesedilo(bes);
+            break;
+           
+            case 11:
+                system("clear");
+                SteviloPreseldkov(bes);
+            break;
+           
+           
+            case 12:
+                system("clear");
+               
+            break;
+           
+           
+            case 13:
+                system("clear");
+               
+            break;
+                       
+            case 14:
+                system("clear");
+               
+            break;
+
+           
+            case 15:
+                system("clear");
+                NajmanjsaStevilkaVpolju(polje,st_el);
+               // return 0;
+            break;
+           
+           
+            case 16:
+                system("clear");
+                Avtor();
+               
+            break;
+           
+            case 17:
+                system("clear");
+                Igra();
+               
+            break;
+           
+            case 18:
+                cout<<endl;
+                cout<<endl;
+         
+                system("clear");
+                cout<<"                   NASVIDENJE. PRITISNI ENTER ZA ZAPRTJE OKNA!"<<endl;
+                cout<<endl;
+                cout<<endl;
+                return 0;
+            break;
+           
+           
+        }
+       
+       
+    }while(izbira != 18);
+        
+    
+    return 0;
+}
+//REBOOT
+// == primerjava
+//i=i+i%2 neskončno ponavljanje 

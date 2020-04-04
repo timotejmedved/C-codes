@@ -1,0 +1,142 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Bolnik{
+    string ime;
+    string priimek;
+    string st_kartice;
+    int datum_rojstva;
+public:
+    Bolnik(){
+       
+    }
+    Bolnik(string ime, string priimek, string st_kartice, int starost) :
+    ime(ime), priimek(priimek), st_kartice(st_kartice), datum_rojstva(datum_rojstva) {
+    }
+  
+    Bolnik DodajanjeBolnikov(){
+        Bolnik b;
+        string temp;
+        int leto;
+        cout << "Vnesi ime: ";
+        cin >> temp;
+        b.SetIme(temp);
+        cout << "Vnesi priimek: ";
+        cin >> temp;
+        b.SetPriimek(temp);
+         cout << "Vnesi leto: ";
+        cin >> leto;
+        b.SetDatum_Rojstva(leto);
+        return b;
+       
+    }
+    Bolnik IskanjeBolnikaIme(Bolnik p[], int d, string ime){
+       
+        for(int i=0;i<d;i++){
+           
+            if(ime==p[i].GetIme())
+           
+               
+            return p[i];   
+               
+           
+              
+        }
+        cout << "Bolnika ni s tem imenom";
+
+    }
+    void Zamenjaj(Bolnik &a, Bolnik &b){
+       
+        Bolnik temp;
+        temp=a;
+        a=b;
+        b=temp;
+       
+       
+    }
+    void RazvrscanjeBolnikovStarost(Bolnik p[],int d){
+       for(int i=0;i<d;i++){
+           for(int j=0;j < i+1;j++){
+               if(p[i].GetDatum_Rojstva()<p[j].GetDatum_Rojstva())
+              
+              Zamenjaj(p[i],p[j]);
+              
+           }
+       }
+    }
+   
+    string GetIme() const {
+        return ime;
+    }
+
+    string GetPriimek() const {
+        return priimek;
+    }
+
+    string GetSt_kartice() const {
+        return st_kartice;
+    }
+
+    int GetDatum_Rojstva() const {
+        return datum_rojstva;
+    }
+
+    void SetIme(string ime) {
+        this->ime = ime;
+    }
+
+    void SetPriimek(string priimek) {
+        this->priimek = priimek;
+    }
+
+    void SetSt_kartice(string st_kartice) {
+        this->st_kartice = st_kartice;
+    }
+
+    void SetDatum_Rojstva(int datum_rojstva) {
+        this->datum_rojstva = datum_rojstva;
+    }
+
+    void IzpisBolnika(){
+        cout << this->GetIme() <<endl;
+        cout << this->GetPriimek() <<endl;
+        cout << this->GetDatum_Rojstva() <<endl;
+        cout << endl;
+    }
+
+   
+};
+
+
+
+int main(int argc, char** argv) {
+ 
+    Bolnik bolnica[5];
+    Bolnik bb;
+   
+    //dodajanje
+    for(int i=0;i<5;i++){
+       bolnica[i]=bb.DodajanjeBolnikov();
+    }
+    //izpis
+    for(int i=0;i<5;i++){
+       bolnica[i].IzpisBolnika();
+      
+    }
+    //iskanje
+    bb=bb.IskanjeBolnikaIme(bolnica,5,"Tone");
+    cout << "nasel sem bolnika: ";
+    bb.IzpisBolnika();
+    //razvrscanje
+   
+    bb.RazvrscanjeBolnikovStarost(bolnica,5);
+             for(int i=0;i<5;i++){
+       bolnica[i].IzpisBolnika();
+      
+    }
+    return 0;
+}
+
+

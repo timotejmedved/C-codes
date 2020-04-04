@@ -1,0 +1,24 @@
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+
+int main(int argc, char** argv){
+
+    int a[10];
+    int x;
+    int i; //indeks
+    int s; //sodo število
+    
+    for(i=0; i<10; i++){
+    
+        s=s+2;
+    a[i]=s;
+    cout<<a<<endl;
+    }
+
+
+  
+}
+

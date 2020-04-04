@@ -1,0 +1,114 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/*
+ NALOGA RAZRED SMUÄŒARSKI SKOKI
+ */
+
+class smuc{
+private:
+    int st_tekmovalca;
+    int dolzina_skoka;
+    int ocene;
+    char vetrena_izravnava;
+    int izravnava_zaletisca;
+   
+public:
+
+    smuc(int st_tekmovalca,int dolzina_skoka,int ocene,char vetrena_izravnava,int izravnava_zaletisca){
+    this->st_tekmovalca = st_tekmovalca;
+    this->dolzina_skoka = dolzina_skoka;
+    this->ocene = ocene;
+    this->vetrena_izravnava = vetrena_izravnava;
+    this->izravnava_zaletisca = izravnava_zaletisca;
+  
+   }
+
+    int getDolzina_skoka() const {
+        return dolzina_skoka;
+    }
+
+    void setDolzina_skoka(int dolzina_skoka) {
+        this->dolzina_skoka = dolzina_skoka;
+    }
+
+    int getIzravnava_zaletisca() const {
+        return izravnava_zaletisca;
+    }
+
+    void setIzravnava_zaletisca(int izravnava_zaletisca) {
+        this->izravnava_zaletisca = izravnava_zaletisca;
+    }
+
+    int getOcene() const {
+        return ocene;
+    }
+
+    void setOcene(int ocene) {
+        this->ocene = ocene;
+    }
+
+    int getSt_tekmovalca() const {
+        return st_tekmovalca;
+    }
+
+    void setSt_tekmovalca(int st_tekmovalca) {
+        this->st_tekmovalca = st_tekmovalca;
+    }
+
+    char getVetrena_izravnava() const {
+        return vetrena_izravnava;
+    }
+
+    void setVetrena_izravnava(char vetrena_izravnava) {
+        this->vetrena_izravnava = vetrena_izravnava;
+    }
+
+   
+    void izrac(){
+        cout<<"skočo si: "<<this->getDolzina_skoka()<<endl;
+       
+        if(this->getDolzina_skoka()<90){
+           
+            cout<<"za dolžino prejes: 60t- "<<90-this->getDolzina_skoka()<<" *2 skupaj tock" << 60-((90-this->getDolzina_skoka())*2) << " tock " <<endl;
+           
+       
+        }else{
+       
+          cout<<"za dolžino prejes: 60t+ "<<this->getDolzina_skoka()-90<<" *2 skupaj tock" << 60+((this->getDolzina_skoka()-90)*2) << " tock " <<endl;
+             
+           
+        }
+       
+   
+   
+   
+   
+   
+    }
+  
+
+};
+
+
+
+
+
+int main(int argc, char** argv) {
+   
+    cout<<"Skakalnica: K = 90m, vrednost 1m  = 2 točki"<<endl;
+   
+   
+    smuc korze(1,95,5,'-',0);
+   
+    korze.izrac();
+   
+    cout<<" "<<endl;
+   
+    smuc drugi(1,87,5,'+',0);
+    drugi.izrac();
+    return 0;
+}

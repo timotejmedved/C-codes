@@ -1,0 +1,57 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+class Pravokot
+{
+public:
+    Pravokot();
+    ~Pravokot();
+    float povrsina();
+    void setA(float);
+    void setB(float);
+private: 
+    float a;
+    float b;
+};
+
+Pravokot::Pravokot()
+{
+}
+
+Pravokot::~Pravokot()
+{
+}
+
+void Pravokot::setA(float a)
+{
+    this->a = a;
+}
+
+void Pravokot::setB(float b)
+{
+    this->b = b;
+}
+
+float Pravokot::povrsina()
+{
+    return a*b;
+}
+
+int main(int argc, char** argv) 
+{
+    Pravokot *pravokot = new Pravokot();   //dinamicna deklaracija
+    pravokot->setA(5.0);
+    pravokot->setB(4.0);
+    cout << pravokot->povrsina() << "\n";
+    
+    Pravokot prav;                         //staticna dekalracija     
+    prav.setA(3.0);
+    prav.setB(2.0);
+    cout << prav.povrsina();
+    
+    
+    return 0;
+}
+

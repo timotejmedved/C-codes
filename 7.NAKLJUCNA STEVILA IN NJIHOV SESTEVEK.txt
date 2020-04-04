@@ -1,0 +1,42 @@
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+int p[30];
+     srand(time(NULL)); 
+    
+     for(int i=0; i<30; i++)
+    {
+       p[i] = (rand()% 70)+0;
+    }
+    
+     cout<<"IZBRANA NAKLJUČNA ŠTEVILA SO: "<<endl;
+     
+     for(int i=0; i<30; i++)
+    {
+        cout<<p[i]<<endl;
+    }
+    
+     
+     //izračun vsote vseh lihih števil
+        
+    cout<<"VSOTA VSEH  ŠTEVIL JE: "<<endl;
+    int vsota;
+    vsota = 0;
+     for(int i=0; i<30; i++)
+    {
+        
+             vsota = vsota + p[i];
+         
+         }
+    cout<<vsota<<endl;
+    return 0;
+    }
+     

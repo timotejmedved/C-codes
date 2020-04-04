@@ -1,0 +1,29 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+
+     
+    int stevilo;
+    int vsota=0;
+    cout<<"Vnesite stevilo ";
+    cin>>stevilo;
+    
+    while(stevilo != 0)
+    {
+        cout<<"vsota začetek"<<vsota<<endl;
+        vsota=vsota+(stevilo%10);
+        cout<<"vsota"<<vsota<<endl;
+        cout<<"stevilo na zacetku"<<stevilo<<endl;
+        stevilo=stevilo/10;
+        cout<<"stevilo"<<stevilo<<endl;
+    }
+    cout<<vsota<<endl;
+    
+    return 0;
+}
+

@@ -1,0 +1,113 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/*
+ NALOGA AVTOPILOT
+ */
+
+class Avtopilot{
+private:
+    int trenutna_visina=0;
+    int max_visina;
+    
+public:
+    
+    Avtopilot(){
+        //this->max_visina = 0;
+       // this->trenutna_visina=0;
+    }
+    
+    Avtopilot(int a){
+         this->trenutna_visina=0;
+        this->max_visina=a;
+    }
+
+    void TrenutnaVisina(){
+      
+        cout<<"TRENUTNA VISINA JE: "<<this->trenutna_visina<<endl;
+     //   cout<<"MAX DOVOLJENA VISINA JE: "<<this->max_visina<<endl;
+    }
+    
+    void DvigZa(int a){
+        
+        if(this->trenutna_visina+a>this->max_visina){
+            cout<<"PRESEZENA MAX VISINA"<<endl;
+            this->trenutna_visina = this->trenutna_visina;
+           // cout<<"TRENUTNA VISINA JE: "<<this->trenutna_visina<<endl;
+            cout<<""<<endl;
+        }
+        else{
+        this->trenutna_visina = this->trenutna_visina+a;
+        cout<<"TRENUTNA VISINA JE: "<<this->trenutna_visina<<endl;
+           cout<<""<<endl;
+        }
+    }
+    
+    void SpustZa(int a){
+    
+        if(this->trenutna_visina-a<0){
+            cout<<"STRMOGLAVIL SI"<<endl;
+            //this->trenutna_visina=0;
+               cout<<""<<endl;
+        }
+        else{
+            this->trenutna_visina = this->trenutna_visina-a;
+            cout<<"TRENUTNA VISINA JE: "<<this->trenutna_visina<<endl;
+               cout<<""<<endl;
+        }
+        
+    }
+    
+    int GetMax_visina() const {
+        return max_visina;
+    }
+
+    int GetTrenutna_visina() const {
+        return trenutna_visina;
+    }
+
+    
+
+};
+
+
+int main(int argc, char** argv) {
+
+    int max_visina;
+    
+    
+    cout<<"PROGRAM AVTOPILOT"<<endl;
+    cout<<"POADJ PODATKE: "<<endl;
+    cout<<"PODAJ MAX DOVOLJENO VISINO: "<<endl;
+    cin>>max_visina;
+    
+    
+    
+    Avtopilot timi(max_visina);
+    
+    timi.TrenutnaVisina();
+   
+    int spre; //sprememba višine
+    
+    for(int a=0;a<=10;a=a+1){
+    
+       spre = rand()%max_visina;
+       if(timi.GetMax_visina()+spre>timi.GetMax_visina()){}
+       cout<<"dviga za"<<spre<<endl;
+       timi.DvigZa(spre);
+    
+       
+       spre = rand()%max_visina;
+       cout<<"spust za "<<spre<<endl;;
+       timi.SpustZa(spre);
+    }
+    
+    
+    
+    return 0;
+}
+
+

@@ -1,0 +1,64 @@
+/*
+6. Napišite program Euroloto. 
+ * Pri tej loteriji žrebajo 5 številk med 1 in 50 in dodatno dve "star" številki med 1 in 9.
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medo
+ *
+ * Created on 25. oktober 2018, 16:39
+ */
+
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+
+     srand(time(NULL)); 
+    
+    int p[5]; //številke
+    int d[2]; //dodatni številki
+    
+    for(int i=0; i<5; i++)
+    {
+    
+    p[i] = (rand()% 50)+1;
+    
+    }
+    
+    for(int i=0; i<2; i++)
+    {
+    
+        d[i] = (rand()% 9)+1;
+        
+    }
+    
+    cout<<"IZREBANE ŠTEVILKE EURO LOTA SO: " ;
+    
+    for(int i=0; i<5; i++)
+    {
+    
+        cout<< p[i]<<" ";
+        
+    }
+    
+    cout<<" "<<endl;
+    cout<<"DODATNI DVE STEVILKI STA: ";
+   
+    
+    for(int i=0; i<2; i++)
+    {
+        cout<< d[i]<<" ";
+    }
+    
+    cout<<" "<<endl;
+    
+    return 0;
+}

@@ -1,0 +1,46 @@
+#include <cstdlib>    
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+
+
+    //int a;
+    // short a;
+    // int b= sizeof(a); //velikost spremenljivke
+
+    // a=10;
+
+    //  cout<< a <<"   timi   "<<b<<endl;
+
+
+    for (int i = 0; i < 101; i++) {
+
+        if (i % 11 == 0 || i % 23 ==0) {
+
+            cout << i + 1 << "   timi   " << endl;
+        }
+    }
+    //= pomeni prireditev
+    //== pomeni primerjanje
+    //5%2=
+    //ostanek deljenja
+    //!= ni enako
+    //==
+
+    /*
+     for (int i = 0; i < 101; i++) {
+
+        if (i % 11 == 0 || i % 23 ==0) {
+
+            cout << i + 1 << "   timi   " << endl;
+        }
+    }
+     */
+    
+    
+    
+    return 0;
+}

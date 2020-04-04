@@ -1,0 +1,30 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/*
+ NALOGA PARAMETRI FUNKCIJ
+ */
+
+void mojafunkcija(int a, int *b){
+
+   
+
+    cout<<a<<endl;
+    cout<<*b<<endl;
+}
+
+
+int main(int argc, char** argv) {
+    
+    int a = 20;
+    int *b;
+    
+    mojafunkcija(a,*b);
+
+    return 0;
+}
+
+

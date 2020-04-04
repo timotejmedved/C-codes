@@ -1,0 +1,38 @@
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+using namespace std;
+
+
+int main(int argc, char** argv) {
+   
+    srand(time(NULL));
+    int a[7]; //polje sedmih števil
+    int r; //naključno število
+  //  int i; //indeks
+    int x;
+    
+    cout<<"LOTO STEVILA SO: "<<endl;
+	while( x++ < 7) //7 naklj. št.
+        {
+            
+		r = (rand() % 10) + 1;
+                
+                a[i]=r;
+                
+                
+                             
+                cout<< a[x]<<endl;
+        }
+ 
+    
+    int d = (rand()% 39)+1;
+    cout<<""<<endl;
+    cout<<"DODATNA STEVILKA JE "<< d<<endl;
+    cout<<""<<endl;
+    
+    
+    return 0;
+}

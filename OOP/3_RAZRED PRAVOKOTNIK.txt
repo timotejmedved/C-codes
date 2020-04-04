@@ -1,0 +1,97 @@
+/*
+ * File:   main.cpp
+ * Author: medved.timotej
+ *
+ * Created on 21. januar 2019, 13:37
+ */
+  
+/*
+ VAJA:
+ *NAPISI RAZRED PRVOKOTNIK KI IMA ATRIBUTA STRANICA A IN STRANICA B.
+ * NAPIŠI SET IN GET METODE DET IZPIS POLŠČINE IN OBSEGA PRAVOKOTNIKA
+ * V IZPIU UPORABI METODO IZRAČUNAJ POLOČINO IN IZRAČUNAJ OBSEG
+ */
+        
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <string>
+#include <time.h>
+#include <cmath>
+
+
+using namespace std;
+
+class pravokotnik{
+private:
+    float a;
+    float b;
+
+public:
+   
+    pravokotnik(){}
+    //kopirni konstrukktor
+    pravokotnik(float p, float d){
+   
+        this->a=p;
+        this->b=d;
+   
+    }
+   
+ 
+
+    void SetA(float a) {
+        this->a = a;
+    }
+
+    void SetB(float b) {
+        this->b = b;
+    }
+   
+    int GetA() const {
+        return a;
+    }
+
+    int GetB() const {
+        return b;
+    }
+
+   
+    float GetPloscina(){
+        //cout<<"PLOSCINA JE: "<<endl;
+        return this->GetA()*this->GetB();
+    }
+   
+    float GetObseg(){
+        //cout<<"OBSEG JE "<<endl;
+        return (2*this->a)+(2*this->b);
+   
+    }
+   
+    void IzpisiPodatekeTrikotnika(){
+       
+         cout<<"Stranica A = "<< this->GetA()<<endl;
+         cout<<"Stranica B = "<< this->GetB()<<endl;
+        cout<<"OBSEG = "<< this->GetObseg()<<endl;
+         cout<<"OBSEG = "<< this->GetPloscina()<<endl;
+    }
+
+};
+
+
+int main(int argc, char** argv) {
+   
+   
+    pravokotnik p;
+    p.SetA(20);
+    p.SetB(50);
+   
+    p.IzpisiPodatekeTrikotnika();
+ 
+   
+    pravokotnik drugi(7.3,10.0);
+    drugi.IzpisiPodatekeTrikotnika();
+   
+
+    return 0;
+}

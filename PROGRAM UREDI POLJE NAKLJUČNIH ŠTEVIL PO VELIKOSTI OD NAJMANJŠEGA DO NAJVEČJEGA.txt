@@ -1,0 +1,45 @@
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+#include <cstdlib>
+
+using namespace std;
+
+/*
+ PROGRAM UREDI POLJE NAKLJUČNIH ŠTEVIL PO VELIKOSTI OD NAJMANJŠEGA DO NAJVEČJEGA
+ */
+
+int main(int argc, char** argv) {
+    int Size;
+    cout<<"vnesi velikost polja"<<endl;
+    cin>>Size;
+    int Array[Size];
+    for(int index=0; index<Size;index++){
+    
+        cin>>Array[index];
+        
+    
+    }
+    for(int i=0;i<Size;i++){
+    
+        for(int j=0;j<Size-i;j++){
+        
+            if(Array[j]>Array[j+1]){  //spremeni predznak in program bo razvrstil števila od največjega do najmanjšega
+            
+            
+                int Temp=Array[j];
+                Array[j]=Array[j+1];
+                Array[j+1]=Temp;
+            }
+        
+        }
+    
+    }
+    
+    for(int index=0;index<Size;index++){
+        cout<<Array[index]<<" ";
+    }
+    return 0;
+}
+

@@ -1,0 +1,63 @@
+/*
+Deklariraj polje desetih celih števil in ga s pomočjo zanke napolni naraščajoče s prvimi desetimi naravnimi sodimi števili.
+
+    Izračunaj vsoto elementov polja.
+    Poišči največje in najmanjše število v polju.
+    Obrni vrstni red elementov.
+
+Rezultate izpiši na zaslon.
+  
+  
+ 
+ * //maklučna števila
+ rand()%100
+  
+  
+ srand(time(NULL));
+ * 
+ * p[i]= rand()%1000;
+ */
+
+/* 
+ * File:   main.cpp
+ * Author: medved.timotej
+ * Created on 21. september 2018, 11:35
+ */
+
+/*
+ OBRAČANJE ŠTEVIL POLJA 1 POLJE NA ZADNJEM MESTU IN OBRATNO
+ 
+ 
+ INT TEMP
+ * 
+ * TEMP=P[0
+ * P[0]
+ 
+ 
+ 
+ */
+
+
+#include <cstdlib>
+#include <stdio.h>      
+#include <stdlib.h> 
+#include <iostream>
+#include <time.h> 
+
+int main(int argc, char** argv){
+
+    int a[10];
+    int x;
+    int i; //indeks
+    int s; //sodo število
+    
+    for(i=0; i<10; i++){
+    
+        s=s+2;
+    a[i]=s;
+    cout<<a<<endl;
+    }
+
+
+  
+}

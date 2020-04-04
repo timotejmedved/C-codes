@@ -1,0 +1,111 @@
+/*
+ * File:   main.cpp
+ * Author: medved.timotej
+ *
+ * Created on 21. januar 2019, 12:44
+ */
+//SESTAVLJENI PODATKOVNI TIPI
+
+
+
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <string>
+#include <time.h>
+#include <cmath>
+
+using namespace std;
+
+class Hisa{  //razred ime razreda
+
+private:
+    //lastnosti razreda ali atributi
+    int sirina;
+    int dolzina;
+    int visina;
+    string barva;
+   
+public:
+   
+    Hisa(){  //konstruktor privzeti metoda
+   
+        //cout<<"timi";
+   
+    }
+   
+    string GetBarva(){   //desni nklik + ali + insert getter
+        return barva;
+    }
+
+    void SetSirina(int s){
+        this->sirina=s;
+    }
+   
+    void SetDolzina(int d){
+   
+         this->dolzina=d;
+   
+    }
+   
+    void SetBarva(string barva){
+   
+         this->barva=barva;
+   
+    }
+   
+    int GetSirina(){
+   
+        return this->sirina;      
+       
+    }
+   
+   
+    int GetVisina(){
+   
+        return this->visina;      
+       
+    }
+
+    int GetDolzina(){
+   
+        return this->dolzina;      
+       
+    }
+   
+   
+    void IzpisiHiso(){
+   
+        cout<<"podatki o hisi so: "<< this->GetDolzina()<<
+                " sirina " << this->GetSirina()<<
+                " barva "<<this->GetBarva()<<endl;
+   
+    }
+   
+   
+};
+
+
+int main(int argc, char** argv) {
+    
+    Hisa h;
+    h.SetSirina(20);
+    h.SetDolzina(40);
+    h.SetBarva("rdeca");
+   
+   
+    cout <<"sirina je " << h.GetSirina() <<endl;
+    cout<<"doltina je je "<<h.GetDolzina()<<endl;
+   
+    h.IzpisiHiso();
+
+
+    Hisa sosed;
+   
+    sosed.SetSirina(26);
+    sosed.SetDolzina(49);
+    sosed.SetBarva("rda");
+   
+    sosed.IzpisiHiso();
+        return 0;
+}

@@ -1,0 +1,218 @@
+/*
+ * File:   main.cpp
+ * Author: medved.timotej
+ * KAZALCI
+ * Created on 28. januar 2019, 12:39
+ */
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+
+
+class oseba{
+private:
+    string ime;
+    string priimek;
+    int starost;
+   
+ 
+public:
+    oseba() {
+    }
+
+    oseba(string ime, string priimek, int startst)
+    {
+        this->ime=ime;
+        this->priimek=priimek;
+        this->starost=starost;
+       
+    }
+   
+    string GetIme() const {
+        return ime;
+    }
+
+    void SetIme(string ime) {
+        this->ime = ime;
+    }
+
+    string GetPriimek() const {
+        return priimek;
+    }
+
+    void SetPriimek(string priimek) {
+        this->priimek = priimek;
+    }
+
+    int GetStarost() const {
+        return starost;
+    }
+
+    void SetStarost(int starost) {
+        this->starost = starost;
+    }
+
+    void IzpisiOsebo(){
+   
+        cout<<"IME: "<< this->GetIme() <<" PRIIMEK: "<< this->GetPriimek()
+        <<" STAROST: "<<this->GetStarost()<<endl;
+   
+    }
+   
+};
+
+
+
+int main(int argc, char** argv) {
+   
+   
+    oseba * ko;
+   
+    ko = new oseba();
+    ko->SetIme("Timotej ");
+    ko->SetPriimek("Medved ");
+    ko->SetStarost(18);
+    ko->IzpisiOsebo();
+   
+   
+    oseba *so;
+    so=new oseba("Jan","Kovac",20);
+   
+    so->IzpisiOsebo();
+   
+    oseba *vas;
+    vas = new oseba[3];
+   
+   
+    vas->SetIme("micka");
+    vas->SetPriimek("makro");
+    vas->SetStarost(22);
+   
+    (vas+1)->SetIme("mjda");
+    (vas+1)->SetPriimek("kol");
+    (vas+1)->SetStarost(23);
+   
+   
+   
+    (vas+2)->SetIme("kamela");
+    (vas+2)->SetPriimek("kmel");
+    (vas+2)->SetStarost(29);
+   
+   
+   
+    for(int i=0;i<3;i++){
+   
+       
+        (vas +i)->IzpisiOsebo();
+       
+   
+    }
+   
+   
+   delete [] vas;
+  
+   delete ko,so;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  /* 
+    int p=3;
+   
+    cout<<"vrednost spremenljivke p= "<<p<<"  naslov je pa: "<<&p<<endl;
+       
+    int *kp;
+    kp = &p;
+   
+    cout<<"vrednost spremenljivke p= "<<kp<<"  naslov je pa: "<<&kp<<endl;
+   
+    cout<<"Vrednost p: " << *kp<<endl;
+   
+    char *a ="lepo je biti mlad";
+   
+    cout<<*a<<endl;
+   
+    while(*a){
+        cout<<*a++;
+    }
+    cout<<""<<endl;
+    char *imena[5]={"janez","timi","franc","tone","miha"};
+    for(int i=0;i<5;i++){
+        cout << imena[i]<<endl;
+    }
+   
+   
+    int polje[100];
+    for(int i=0;i<100;i++){
+        polje[i]=rand()%1000;
+    }
+   
+    int * kpolje;
+    kpolje=polje;
+    int * kkp; //kpoija kazalca
+    kkp=kpolje;
+   
+   
+    for(int i=0;i<100;i++){
+        cout<<*kpolje<<" ";
+        kpolje++;
+    }
+    cout<<""<<endl;
+    cout<<""<<endl;
+    cout<<""<<endl;
+    cout<<""<<endl;
+   
+    for(int i=0;i<100;i++){
+        cout<<*kkp<<" ";
+        kkp++;
+    }
+   
+    *//*
+    //  DINAMIČNO POLJE
+    int * dp, *bkp;
+    dp= new int[100];
+    bkp=dp;
+   
+    for(int i=0;i<100;i++,dp++){
+        *dp=rand()%1000;
+        //dp++;
+    }
+   
+   
+    for(int i=0;i<100;i++){
+        cout<<*bkp<<" ";
+       bkp++;
+      
+    }
+   
+    */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    return 0;
+}
