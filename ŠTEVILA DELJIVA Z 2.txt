@@ -1,0 +1,26 @@
+/* 
+ * File:   main.cpp
+ * Author: medved.timotej
+ * Created on 14. september 2018, 11:58
+ */
+
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {   
+    int i= 0;
+    
+    while(i<100000){    
+        if((i>=200) && (i<=300))
+        {        
+            if(i%2==0){
+                cout<<i<<endl;
+            } 
+        }
+        i++;    
+    }
+    return 0;
+}
+
